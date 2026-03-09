@@ -29,6 +29,13 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
+## Desbloqueando execução do script activate
+O Windows PowerShell às vezes bloqueia a execução de scripts por segurança. O script Activate.ps1 do Python venv é um script PowerShell, então ele é bloqueado pela política de execução. O erro vem da Execution Policy. Para corrigir, execute no PowerShell como administrador:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## Instalando as Dependências
 
 Com o ambiente virtual ativado, instale as bibliotecas:
